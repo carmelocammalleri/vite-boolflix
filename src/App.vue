@@ -37,7 +37,7 @@
 </script>
 
 <template>
- <Header @ciao="getApi"/>
+ <Header @filmSearched="getApi"/>
  <Main/>
 </template>
 

@@ -12,12 +12,15 @@
 </script>
 
 <template>
-  <input @keyup.enter="$emit('ciao')" v-model="store.filmToSearch" type="text" placeholder="Cerca il titolo...">
-  <select name="selectionType" id="">
-    <option value="film">film</option>
-    <option value="serie">serie</option>
-    <option value="tutto">tutto</option>
-  </select>
+  <div>
+
+    <input @keyup.enter="$emit('filmSearched')" v-model="store.filmToSearch" type="text" placeholder="Cerca il titolo...">
+    <select name="selectionType" id="">
+      <option value="film">film</option>
+      <option value="serie">serie</option>
+      <option value="tutto">tutto</option>
+    </select>
+  </div>
 
 </template>
 

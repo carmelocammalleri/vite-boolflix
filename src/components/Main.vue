@@ -17,16 +17,20 @@
         :key="index">
         <p class="text-uppercase ">{{ film.title }}</p>
         <p class=" text-decoration-underline ">{{film.original_title}}</p>
-        
-        <p v-if="film.original_language === 'en'">
+
+        <div v-if="film.original_language === 'en'">
           <img src="/public/image/en.png" alt="">
-        </p>
-        <p v-else-if="film.original_language === 'it'">
-          <img src="/public/image/it.png" alt="">
-        </p>
-        <p v-else>
+          <span> {{ film.original_language }} </span>
+        </div>
+        <div v-else-if="film.original_language === 'it'">
+          <img  src="/public/image/it.png" alt="">
+          <span> {{ film.original_language }}</span>
+
+        </div>
+        <div v-else>
           <img src="/public/image/uknown.png" alt="">
-        </p>
+          <span> {{ film.original_language }}</span>
+        </div>
         <p>Voto Community: {{film.vote_average}}</p>
         <img :src="`https://image.tmdb.org/t/p/${film.poster_path}`" alt="">
 
@@ -36,6 +40,10 @@
 
 </template>
 
-<style>
+<style lang="scss">
+  div>img{
+    width: 30px;
+    margin-right: 5px;
+  }
 
 </style>
