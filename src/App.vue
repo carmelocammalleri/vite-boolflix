@@ -17,10 +17,15 @@
     },
     methods:{
       getApi(){
-        axios.get(store.apiUrl)
+        axios.get(store.apiUrl,{
+          params:{
+            query:store.filmToSearch
+          }
+        })
         .then(res => {
           store.filmsList= res.data.results
           console.log(res.data.results);
+
         })
       }
     },
@@ -32,7 +37,7 @@
 </script>
 
 <template>
- <Header/>
+ <Header @ciao="getApi"/>
  <Main/>
 </template>
 

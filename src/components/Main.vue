@@ -17,6 +17,7 @@
         :key="index">
         <p class="text-uppercase ">{{ film.title }}</p>
         <p class=" text-decoration-underline ">{{film.original_title}}</p>
+        
         <p v-if="film.original_language === 'en'">
           <img src="/public/image/en.png" alt="">
         </p>
