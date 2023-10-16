@@ -17,6 +17,6 @@
  <Main/>
 </template>
 
-<style scoped>
-
+<style lang="scss">
+  @use './scss/main.scss';
 </style>
