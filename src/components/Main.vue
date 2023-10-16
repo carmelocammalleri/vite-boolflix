@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div>ciao boolflix main</div>
+  <div class="card">ciao boolflix main</div>
 
 </template>
 
