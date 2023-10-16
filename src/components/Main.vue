@@ -15,10 +15,10 @@
   <div class="card">
     <div v-for="(film, index) in store.filmsList" 
         :key="index">
-        <p>{{ film.title }}</p>
-        <p>{{film.original_title}}</p>
-        <p>{{film.original_language}}</p>
-        <p>{{film.vote_average}}</p>
+        <p class="text-uppercase ">{{ film.title }}</p>
+        <p class=" text-decoration-underline ">{{film.original_title}}</p>
+        <p>Lingua: {{film.original_language}}</p>
+        <p>Voto Community: {{film.vote_average}}</p>
         <img :src="`https://image.tmdb.org/t/p/${film.poster_path}`" alt="">
 
     </div>
