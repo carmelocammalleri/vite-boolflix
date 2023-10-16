@@ -1,9 +1,11 @@
 <script>
-
+  export default {
+    name: 'Header'
+  }
 </script>
 
 <template>
-  <input type="text" placeholder="Cerca il titolo...">
+  <input v-model="filmToSearch" type="text" placeholder="Cerca il titolo...">
   <select name="selectionType" id="">
     <option value="film">film</option>
     <option value="serie">serie</option>
