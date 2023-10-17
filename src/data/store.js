@@ -8,5 +8,4 @@ export const store = reactive ({
   },
   movie:[],
   tv:[],
-  filmToSearch: null
 })

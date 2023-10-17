@@ -21,11 +21,11 @@
     <div class="row row-cols-4">
 
       <div class=" card" 
-          v-for="film in store.movie" 
+          v-for="film in store[type]" 
           :key="film.id">
           <div class="card-body">
-            <h3 class="card-title">{{ film.title }}</h3>
-            <p class="card-title text-decoration-underline ">{{film.original_title}}</p>
+            <h3 class="card-title">{{ film.title || film.name }}</h3>
+            <p class="card-title text-decoration-underline ">{{film.original_title || film.original_name }}</p>
     
             <div v-if="film.original_language === 'en'">
               <img src="/public/image/en.png" alt="">
