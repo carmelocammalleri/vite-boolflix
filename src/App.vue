@@ -18,14 +18,11 @@
     methods:{
       getApi(){
         axios.get(store.apiUrl,{
-          params:{
-            query:store.filmToSearch
-          }
+          params: store.apiParams
         })
         .then(res => {
-          store.filmsList= res.data.results
+          store.movie= res.data.results
           console.log(res.data.results);
-
         })
       }
     },

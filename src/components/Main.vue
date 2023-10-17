@@ -13,8 +13,8 @@
 
 <template>
   <div class="card">
-    <div v-for="(film, index) in store.filmsList" 
-        :key="index">
+    <div v-for="film in store.movie" 
+        :key="film.id">
         <p class="text-uppercase ">{{ film.title }}</p>
         <p class=" text-decoration-underline ">{{film.original_title}}</p>
 
@@ -22,6 +22,7 @@
           <img src="/public/image/en.png" alt="">
           <span> {{ film.original_language }} </span>
         </div>
+
         <div v-else-if="film.original_language === 'it'">
           <img  src="/public/image/it.png" alt="">
           <span> {{ film.original_language }}</span>
