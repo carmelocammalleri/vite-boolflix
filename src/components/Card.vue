@@ -46,7 +46,7 @@ export default{
             <img class="flag" src="/public/image/uknown.png" alt="">
             <span class="card-text"> {{ film.original_language }}</span>
           </div>
-          <span class="card-text">Voto Community: {{film.vote_average}}</span>
+          <span class="card-text">Voto Community: {{Math.ceil(film.vote_average / 2)}}</span>
           <!-- /lingua inserita -->
           
         </div>
