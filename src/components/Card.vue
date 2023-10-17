@@ -22,10 +22,13 @@ export default{
   <h1>{{title}}</h1>
   <div class="row row-cols-4">
 
+    <!-- Card contenente i vari film -->
     <div class=" card" 
         v-for="film in store[type]" 
         :key="film.id">
         <div class="card-body">
+
+          <!-- lingua inserita -->
           <h3 class="card-title">{{ film.title || film.name }}</h3>
           <p class="card-title text-decoration-underline ">{{film.original_title || film.original_name }}</p>
   
@@ -44,6 +47,7 @@ export default{
             <span class="card-text"> {{ film.original_language }}</span>
           </div>
           <span class="card-text">Voto Community: {{film.vote_average}}</span>
+          <!-- /lingua inserita -->
           
         </div>
         <img 
