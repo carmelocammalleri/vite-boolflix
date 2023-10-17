@@ -1,39 +1,39 @@
 <script>
-  import Header from './components/Header.vue';
-  import Main from './components/Main.vue';
-  import { store } from './data/store';
-  import axios from 'axios';
+   import Header from './components/Header.vue';
+   import Main from './components/Main.vue';
+   import { store } from './data/store';
+   import axios from 'axios';
 
-  export default {
+   export default {
     name: 'App',
-    components: {
+     components: {
       Header,
-      Main
-    },
-    data(){
-      return {
-        store
-      }
-    },
-    methods:{
-      getApi(type){
-        axios.get(store.apiUrl + type, {
-          params: store.apiParams
-        })
-        .then(res => {
-          store[type]= res.data.results
-          console.log(res.data.results);
-        })
-      },
-      sendSearch(){
-        this.getApi('movie')
-        this.getApi('tv')
-      }
-    },
-    mounted:{
-    }
-  }
-
+       Main
+     },
+     data(){
+       return {
+         store
+       }
+     },
+     methods:{
+       getApi(type){
+         axios.get(store.apiUrl + type, {
+           params: store.apiParams
+         })
+         .then(res => {
+           store[type]= res.data.results
+           console.log(res.data.results);
+         })
+       },
+       sendSearch(){
+         this.getApi('movie')
+         this.getApi('tv')
+       }
+     },
+     mounted(){
+     } 
+   }
+ 
 </script>
 
 <template>
@@ -43,5 +43,5 @@
 </template>
 
 <style lang="scss">
-  @use './scss/main.scss';
+   @use './scss/main.scss';
 </style>
