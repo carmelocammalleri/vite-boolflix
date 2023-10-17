@@ -23,7 +23,7 @@ export default{
   <div class="row row-cols-4">
 
     <!-- Card contenente i vari film -->
-    <div class=" card" 
+    <div class=" card my-2" 
         v-for="film in store[type]" 
         :key="film.id">
         <div class="card-body">

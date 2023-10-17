@@ -26,17 +26,18 @@
 
          //Condizione con la quale studio gli elementi nell'array
          .then(res => {
-             if(store[type].lenght=== 0){
-              this.message= 'nessun film trovato'
-            }else{
-              store[type]= res.data.results
-              console.log(res.data.results);
+            store[type]= res.data.results
+            console.log(res.data.results);
+
+            if(store[type].length === 0){
+              this.message= 'Nessun risultato trovato'
             }
           })
        },
        sendSearch(){
          this.getApi('movie')
          this.getApi('tv')
+         store.apiParams.query= '';
        }
       },
       mounted(){
@@ -52,7 +53,7 @@
 <Header @filmSearched="sendSearch"/>
 <Main v-if="store.movie.length>0" title="Film" type="movie"/>
 <Main v-if="store.tv.length>0" title="Serie TV" type="tv"/>
-<h2 v-else>{{message}}</h2>
+<h2 class="my-5" v-if="(store.movie.length===0 && store.tv.length===0 )">{{this.message}}</h2>
 
 </template>
 
