@@ -1,12 +1,15 @@
 <script>
 import {store} from '../data/store'
+import Star from './partials/Star.vue'
 
 export default{
   name: 'Card',
+  components:{
+    Star
+  },
   props:{
       title: String,
       type: String,
-      image: Object
     },
     data(){
       return{
@@ -48,7 +51,11 @@ export default{
             <span class="card-text"> {{ film.original_language }}</span>
           </div>
 
-          <span class="card-text">Voto Community: {{Math.ceil(film.vote_average / 2)}}</span>
+          
+
+            <Star :vote="film.vote_average"/>
+          
+          
           <!-- /lingua inserita -->
           
         </div>
