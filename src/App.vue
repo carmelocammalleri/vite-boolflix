@@ -54,7 +54,7 @@
 <main class="mainContainer">
   <Main v-if="store.movie.length>0" title="Film" type="movie"/>
   <Main v-if="store.tv.length>0" title="Serie TV" type="tv"/>
-  <h2 v-if="(store.movie.length===0 && store.tv.length===0 )">{{this.message}}</h2>
+  <h3 v-if="(store.movie.length===0 && store.tv.length===0 )">{{this.message}}</h3>
 </main>
 
 </template>

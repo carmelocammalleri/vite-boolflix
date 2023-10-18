@@ -61,10 +61,17 @@ export default{
             :src="`https://image.tmdb.org/t/p/w342/${film.poster_path}`" 
             alt="{{ film.poster_path }}"
             v-if="film.poster_path">
-            <img 
-              class="imagePoster" 
-              v-else src="https://i.pinimg.com/736x/47/21/d6/4721d63c03ee90875e960572d8a676f8.jpg" alt="">
+
+            <div class="unknownCard" v-else >
+              <img 
+                class="imagePoster" 
+                 src="https://i.pinimg.com/736x/47/21/d6/4721d63c03ee90875e960572d8a676f8.jpg" alt="">
+              <span class="titleImageUnknown text-uppercase">
+                {{film.original_title || film.original_name }}
+              </span>
+            </div>
         </div>
+
     </div>
   </div>
 </div>

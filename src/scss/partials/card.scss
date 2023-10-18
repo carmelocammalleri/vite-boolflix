@@ -1,5 +1,5 @@
 .containerWrapper{
-
+  margin-bottom: 50px;
   .card {
     overflow: hidden;
     padding: 0;
@@ -11,12 +11,28 @@
       width: 30px;
       margin-right: 5px;
     }
+
   }
   .posters{
     overflow: hidden;
-    object-fit: fill;
+    object-fit: contain;
+
+
     .imagePoster{
       width: 100%;
+    }
+
+    .unknownCard {
+      position: relative;
+  
+      .titleImageUnknown {
+        text-align: center;
+        color: black;
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+      }
     }
   }
 }
