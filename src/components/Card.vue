@@ -27,7 +27,7 @@ export default{
 
 <template>
 
-<div class=" container">
+<div class="container">
   <h1>{{title}}</h1>
   <div class="row row-cols-4">
 
@@ -68,8 +68,9 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-   .card .flag{
+  .card .flag{
     width: 30px;
     margin-right: 5px;
   }
+
 </style>

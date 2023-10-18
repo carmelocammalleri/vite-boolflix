@@ -51,10 +51,10 @@
 <template>
 
 <Header @filmSearched="sendSearch"/>
-<main>
+<main class="mainContainer">
   <Main v-if="store.movie.length>0" title="Film" type="movie"/>
   <Main v-if="store.tv.length>0" title="Serie TV" type="tv"/>
-  <h2 class="my-6" v-if="(store.movie.length===0 && store.tv.length===0 )">{{this.message}}</h2>
+  <h2 v-if="(store.movie.length===0 && store.tv.length===0 )">{{this.message}}</h2>
 </main>
 
 </template>

@@ -22,7 +22,12 @@
     <nav class="searchBarr">
 
       <!-- input -->
-      <input @keyup.enter="$emit('filmSearched')" v-model="store.apiParams.query" type="text" placeholder="Cerca il titolo...">
+      <input 
+        class="text-black"
+        @keyup.enter="$emit('filmSearched')"
+        v-model="store.apiParams.query"
+        type="text"
+        placeholder="Cerca il titolo...">
 
       <!-- select -->
       <!-- <select name="selectionType" id="">

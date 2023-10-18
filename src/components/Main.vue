@@ -1,5 +1,5 @@
 <script>
-  import Card from './Card.vue'
+  import Card from './Card.vue';
 
   export default {
     name: 'Main',
@@ -10,10 +10,9 @@
 </script>
 
 <template>
- <Card/>
+    <Card/>
 </template>
 
 <style lang="scss">
- 
 
 </style>
