@@ -10,7 +10,13 @@ export default{
     },
     data(){
       return{
-        store
+        store,
+        flags:[ 'it', 'en']
+      }
+    },
+    methods: {
+      getImagePath(img){
+        return new URL(`/public/image/${img}.png`, import.meta.url).href
       }
     }
 }
@@ -32,20 +38,16 @@ export default{
           <h3 class="card-title">{{ film.title || film.name }}</h3>
           <p class="card-title text-decoration-underline ">{{film.original_title || film.original_name }}</p>
   
-          <div v-if="film.original_language === 'en'">
-            <img class="flag" src="/public/image/en.png" alt="">
+          <div v-if="flags.includes(film.original_language)">
+            <img class="flag" :src="getImagePath(film.original_language)" alt="">
             <span class="card-text"> {{ film.original_language }} </span>
           </div>
   
-          <div v-else-if="film.original_language === 'it'">
-            <img class="flag" src="/public/image/it.png" alt="">
-            <span class="card-text"> {{ film.original_language }}</span>
-  
-          </div>
           <div v-else>
             <img class="flag" src="/public/image/uknown.png" alt="">
             <span class="card-text"> {{ film.original_language }}</span>
           </div>
+
           <span class="card-text">Voto Community: {{Math.ceil(film.vote_average / 2)}}</span>
           <!-- /lingua inserita -->
           
