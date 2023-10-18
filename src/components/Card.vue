@@ -14,8 +14,7 @@ export default{
     data(){
       return{
         store,
-        flags:[ 'it', 'en'],
-        appear
+        flags:[ 'it', 'en']
       }
     },
     methods: {
@@ -24,6 +23,7 @@ export default{
       },
       infoAppear(){
         console.log('qui transizione info');
+        
       }
     }
 }
