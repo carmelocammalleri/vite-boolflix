@@ -1,0 +1,22 @@
+.containerWrapper{
+
+  .card {
+    overflow: hidden;
+    padding: 0;
+    height: 320px;
+    border-color: rgb(65, 65, 65);
+    object-fit: contain;
+
+    .flag{
+      width: 30px;
+      margin-right: 5px;
+    }
+  }
+  .posters{
+    overflow: hidden;
+    object-fit: fill;
+    .imagePoster{
+      width: 100%;
+    }
+  }
+}
