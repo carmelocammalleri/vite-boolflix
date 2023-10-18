@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <header class="d-flex justify-content-between align-items-center">
+  <header class="d-flex justify-content-between align-items-center fixed-top ">
     <!-- LOGO -->
     <div id="logo">
       <img src="/image/logo-boolflix.png" alt="logo-boolflix">
