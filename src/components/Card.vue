@@ -14,12 +14,16 @@ export default{
     data(){
       return{
         store,
-        flags:[ 'it', 'en']
+        flags:[ 'it', 'en'],
+        appear
       }
     },
     methods: {
       getImagePath(img){
         return new URL(`/public/image/${img}.png`, import.meta.url).href
+      },
+      infoAppear(){
+        console.log('qui transizione info');
       }
     }
 }
@@ -32,10 +36,11 @@ export default{
   <div class="row row-cols-5">
 
     <!-- Card contenente i vari film -->
-    <div class="card my-1" 
+    <div class="card my-1 cardInfo" 
         v-for="film in store[type]" 
         :key="film.id">
-        <div class="card-body d-none">
+        <div class="card-body cardInfoTransition"
+          @mouseenter="infoAppear">
 
           <!-- lingua inserita -->
           <h4 class="card-title">{{ film.title || film.name }}</h4>
