@@ -12,18 +12,29 @@
 </script>
 
 <template>
-  <div>
+  <header class="d-flex justify-content-between align-items-center">
+    <!-- LOGO -->
+    <div id="logo">
+      <img src="/image/logo-boolflix.png" alt="logo-boolflix">
+    </div>
 
-    <input @keyup.enter="$emit('filmSearched')" v-model="store.apiParams.query" type="text" placeholder="Cerca il titolo...">
-    <select name="selectionType" id="">
-      <option value="film">film</option>
-      <option value="serie">serie</option>
-      <option value="tutto">tutto</option>
-    </select>
-  </div>
+    <!-- SEARCHBARR -->
+    <nav class="searchBarr">
+
+      <!-- input -->
+      <input @keyup.enter="$emit('filmSearched')" v-model="store.apiParams.query" type="text" placeholder="Cerca il titolo...">
+
+      <!-- select -->
+      <!-- <select name="selectionType" id="">
+        <option value="film">film</option>
+        <option value="serie">serie</option>
+        <option value="tutto">tutto</option>
+      </select> -->
+    </nav>
+  </header>
 
 </template>
 
-<style>
-
+<style lang="scss">
+  @use '../scss/header.scss';
 </style>

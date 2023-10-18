@@ -59,4 +59,6 @@
 
 <style lang="scss">
    @use './scss/main.scss';
+   @use './scss/header.scss';
+
 </style>

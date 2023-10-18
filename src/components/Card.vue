@@ -32,7 +32,7 @@ export default{
   <div class="row row-cols-4">
 
     <!-- Card contenente i vari film -->
-    <div class=" card my-2" 
+    <div class="card my-2" 
         v-for="film in store[type]" 
         :key="film.id">
         <div class="card-body">
@@ -51,11 +51,7 @@ export default{
             <span class="card-text"> {{ film.original_language }}</span>
           </div>
 
-          
-
-            <Star :vote="film.vote_average"/>
-          
-          
+            <Star :vote="film.vote_average"/>     
           <!-- /lingua inserita -->
           
         </div>
@@ -71,7 +67,7 @@ export default{
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
    .card .flag{
     width: 30px;
     margin-right: 5px;
